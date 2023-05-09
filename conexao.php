@@ -25,10 +25,13 @@ class Conexao
       $this->banco
     );
 
-    if (mysqli_connect_errno($this->conexao)) {
+    if ($this->conexao->connect_error) {
       return false;
     } else {
       mysqli_query($this->conexao, "SET NAMES 'utf8';");
+      // echo "ok";
+      // print_r($this->conexao);
+      return true;
     }
   }
 
@@ -37,10 +40,10 @@ class Conexao
     return mysqli_query($this->conexao, $sql);
   }
 
-  function primeiroRegistroQuery($query)
-  {
-    $linhas = $this->executaQuery($query);
+  // function primeiroRegistroQuery($query)
+  // {
+  //   $linhas = $this->executaQuery($query);
 
-    return mysqli_fetch_array($linhas);
-  }
+  //   return mysqli_fetch_array($linhas);
+  // }
 }

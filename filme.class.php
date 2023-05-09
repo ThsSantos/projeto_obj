@@ -19,32 +19,32 @@ class Filme
   {
     $this->id = $id;
   }
-  public function getId($id)
+  public function getId()
   {
-    $this->id = $id;
+    return $this->id;
   }
   public function setTitulo($titulo)
   {
     $this->titulo = $titulo;
   }
-  public function getTitulo($titulo)
+  public function getTitulo()
   {
-    $this->titulo = $titulo;
+    return $this->titulo;
   }
   public function setSinopse($sinopse)
   {
     $this->sinopse = $sinopse;
   }
-  public function getSinopse($sinopse)
+  public function getSinopse()
   {
-    $this->sinopse = $sinopse;
+    return $this->sinopse;
   }
   public function setTrailer($trailer)
   {
     $this->trailer = $trailer;
   }
-  public function getTrailer($trailer)
+  public function getTrailer()
   {
-    $this->trailer = $trailer;
+    return $this->trailer;
   }
 }
